@@ -1,0 +1,36 @@
+// Place all the styles related to the admin/projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'mixins';
+
+.new_project{
+	padding:1%;
+	text-decoration:none;
+    
+}
+
+.project_heading, .project_attribute{
+  @include bee-background;
+  @include fancy-text;
+  margin-bottom:2%;
+  margin-top: 2%; 
+  padding:1%;
+}
+
+.project_description{
+	font-size:150%;
+	font-weight:bold;
+	padding-left:1%;
+	font-family: "comic sans ms"
+}
+
+.project_detail{
+  font-size:150%;
+  font-weight:bold;
+  padding-left:4%;
+}
+
+.project_detail_value{
+  font-size:120%;
+}

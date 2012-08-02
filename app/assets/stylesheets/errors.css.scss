@@ -1,0 +1,43 @@
+.field_with_errors {
+  //color: #b94a48;
+  
+  input{
+    border-color: #b94a48;
+  } 
+
+  select {
+    
+    border-color: #b94a48;
+  }
+  
+  textarea {
+    border-color: #b94a48;  
+  }
+
+  input:focus {
+    border-color: #953b39;
+    -webkit-box-shadow: 0 0 6px #d59392;
+    -moz-box-shadow: 0 0 6px #d59392;
+    box-shadow: 0 0 6px #d59392;
+  }
+
+  select:focus{
+    border-color: #953b39;
+    -webkit-box-shadow: 0 0 6px #d59392;
+    -moz-box-shadow: 0 0 6px #d59392;
+    box-shadow: 0 0 6px #d59392;
+  }
+
+  textarea:focus{
+    border-color: #953b39;
+    -webkit-box-shadow: 0 0 6px #d59392;
+    -moz-box-shadow: 0 0 6px #d59392;
+    box-shadow: 0 0 6px #d59392;
+  }
+  
+  label {
+    color:#b94a48;
+  }
+
+
+}

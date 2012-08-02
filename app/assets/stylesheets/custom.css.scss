@@ -1,0 +1,84 @@
+// --- General styling --- //
+
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+@import 'colors';
+@import 'mixins';
+
+body{
+
+  padding:0;
+  margin:0px;
+  background:#f1f1ee; 
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+.navigation{
+	
+}
+
+.brand{
+  font-size:300%;
+  font-weight:bold;
+  font-family: Georgia, serif;
+}
+
+.title{
+  
+  font-size:500%;
+  font-weight:bold;
+  padding-top:2.5%;
+  padding-left:0;
+  //font-family: Georgia, serif;
+}
+
+.cool{
+  color:$lightGray;
+  background-color:$lightGray;
+  border-top:1px solid $lightGray;
+  border-bottom:1px solid #fff;
+}
+
+.debug{
+  border: solid 1px red;
+}
+
+p.greetings{
+  margin-bottom:2%;
+}
+
+.hero-bee{
+  @include bee-background;
+}
+
+
+// General form styling
+
+
+.bee-input input,textarea{
+  
+  border: 1px solid #bbb;
+  height: auto;
+  line-height:110%;
+  margin-top: 1.5%;
+  font-size:150%;
+  width:100%;
+  @include radius-7;
+
+}
+
+.bee-input textarea{
+  margin-bottom:1.5%;
+}
+
+.bee-label label{
+
+  font-size:120%;
+  font-weight:bold;
+}
+
+
+

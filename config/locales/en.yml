@@ -2,4 +2,29 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  time:
+    formats:
+      long: "%A,%d %B %Y at %H:%M:%S"
+  main_title: "Bee Projects Manager"
+  alert: "Warning!"
+  form_contains: "The form contains"
+  brand: "Powered By Domenico D'Egidio"
+  header_title: "Bee Projects Manager"
+  greetings: "Welcome To Bee Project Manager"
+  admin:
+    projects:
+      unavailable: "The project you are looking for could not be found"
+      new:
+        title: "New Project"
+        description: "Project description"
+        label_title: "Project title"
+        heading: "Insert project's details"
+        submit: "Create Project"
+      create:
+        success: "Project %{title} was successfully created"
+        title_failure: "Error during creation of project %{title}"
+      show:
+        description: "%{title} (description)"
+        details: "%{title} (details)" 
+        created_at: "Created at : "
+        updated_at: "Last update : "    

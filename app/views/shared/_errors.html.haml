@@ -1,0 +1,15 @@
+.alert.alert-error
+  =link_to( '&times;'.html_safe, '#',"data-dismiss"=>"alert", :class=>'close')
+  %h3.alert_heading=t("alert")
+  %br
+  %span.warning
+    =t("form_contains") 
+    =pluralize(model.errors.count,"error")
+  %hr.cool
+  %ul
+    - model.errors.full_messages.each do |error|
+      %li= error 
+
+    
+
+

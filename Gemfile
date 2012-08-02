@@ -7,6 +7,7 @@ gem "taps"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-ui-themes'

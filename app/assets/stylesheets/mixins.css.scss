@@ -1,0 +1,32 @@
+@import 'colors';
+
+@mixin radius-7 {
+  -moz-border-radius:7px; 
+  -webkit-border-radius:7px; 
+   border-radius:7px;
+   outline:0;
+   -webkit-appearance: none; // For iOS devices
+
+}
+
+
+@mixin bee-background{
+  padding:2.5%;
+  background: $initialBeeYellow;
+  background: -webkit-gradient(linear, left top, right bottom, from($initialBeeYellow), to($finalBeeYellow)); /* for webkit browsers */ 
+  background: -moz-linear-gradient(top,  $initialBeeYellow,  $finalBeeYellow); /* for firefox 3.6+ */
+  background: -webkit-linear-gradient(top,$initialBeeYellow, $finalBeeYellow);
+  background: -ms-linear-gradient(top, $initialBeeYellow, $finalBeeYellow);
+  background: -o-linear-gradient(top, $initialBeeYellow, $finalBeeYellow); 
+  border:solid 1px #a1a1a1;  
+  @include radius-7;
+  
+}
+
+
+
+@mixin fancy-text{  
+  font-size: 200%;
+  font-family: Georgia, serif;
+  text-shadow: rgba(229,210,43,.8) 1px 1px 1px; 
+}

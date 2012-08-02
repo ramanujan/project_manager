@@ -1,0 +1,30 @@
+=render "shared/flash_messages"
+.row-fluid
+  .span1 &nbsp;
+  
+  .span9
+   
+    .row-fluid
+      .project_attribute=sanitize t("admin.projects.show.description",title: @project.title )
+    
+    .row-fluid
+      %span.project_description=sanitize(@project.description)   
+    
+    .row-fluid
+      .project_attribute=t("admin.projects.show.details",title:@project.title) 
+    
+    .row-fluid
+      .span2 
+        .project_detail=t("admin.projects.show.created_at")   
+      .span10
+        .project_detail_value=l(@project.created_at,:format=>:long)
+    %hr.cool
+
+    .row-fluid
+      .span2
+        .project_detail=t("admin.projects.show.updated_at")
+
+      .span10
+        .project_detail_value=l(@project.updated_at,:format=>:long)
+
+  .span1 &nbsp; 

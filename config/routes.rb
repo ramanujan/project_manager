@@ -1,4 +1,14 @@
 Ticketee::Application.routes.draw do
+  get "base/index"
+
+  get "/home", to:'static_pages#home'
+  root         to: 'static_pages#home'
+  
+  namespace :admin do
+    root to: 'base#index'
+    resources :projects
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
