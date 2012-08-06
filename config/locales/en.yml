@@ -28,6 +28,14 @@ en:
         details: "%{title} (details)" 
         created_at: "Created at : "
         updated_at: "Last update : "
-    
+      edit:
+        edit_project: "Edit Project"
+        title: "Editing project %{title}"
+        heading: "Edit project's attribute"
+        submit: "Update Project"
       index:
         available_projects: "Listing all projects"
+      update:
+        success:  "Project %{title} was successfully updated"
+        error: "This error occurs during update: %{msg}"
+        error_title: "Error updating %{title}"

@@ -1,0 +1,17 @@
+.row-fluid
+  .span2 &nbsp;
+  
+  .span8
+    - unless @project.errors.empty? 
+      .row-fluid
+        .span12
+          =render partial:'shared/errors', locals:{model:@project}
+    
+    .project_heading=t("admin.projects.edit.heading")
+  
+  .span2 &nbsp;
+
+.row-fluid
+  .span2 &nbsp;
+  .span8=render "form" 
+  .span2 &nbsp;

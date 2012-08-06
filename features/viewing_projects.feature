@@ -9,7 +9,6 @@ Background:
   When I follow "Listing all projects"
 
 Scenario: Listing all projects
-  Then show me the page
   Then I should see "TextMate 2" within "a"
   
 Scenario: Listing all projects and view one 

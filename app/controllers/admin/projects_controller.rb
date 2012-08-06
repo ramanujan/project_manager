@@ -1,13 +1,14 @@
 class Admin::ProjectsController < ApplicationController
   
-  before_filter :find_project, only:[:show]
+  before_filter :find_project, only:[:show,:edit,:update]
 
   def new
 
-	@title = t("admin.projects.new.title")
-	@project = Project.new 
+	  @title = t("admin.projects.new.title")
+	  @project = Project.new 
     
   end
+  
   
   def create
 
@@ -22,6 +23,7 @@ class Admin::ProjectsController < ApplicationController
     end
   
   end
+  
 
   def show
   
@@ -29,13 +31,42 @@ class Admin::ProjectsController < ApplicationController
      
   end
 
+
   def index 
   
     @projects = Project.all  
     @title = t("admin.projects.index.available_projects") 
     
   end
+  
 
+  def edit
+  
+    @title = t("admin.projects.edit.title",title:@project.title)
+     
+  end
+
+
+  def update
+    begin
+      old_title = @project.title
+      if @project.update_attributes(params[:project])
+        flash[:block] = t("admin.projects.update.success",title:old_title)
+        redirect_to [:admin,@project]
+      else
+        @title=t("admin.projects.update.error_title",title:old_title)
+        render :edit
+      end  
+    
+    rescue => msg
+      @title=t("admin.projects.update.error_title",title:old_title)
+      flash[:error]=t("admin.projects.update.error",msg:msg)
+      redirect_to  [:admin,@project]
+    end 
+
+  end
+
+  
 
   private
     

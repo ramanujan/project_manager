@@ -4,12 +4,20 @@
   
   .span10
     %div{id:"main"}
+      
+      .row-fluid
+        .span2
+          =link_to [:edit,:admin,@project], class:"btn btn-primary" do
+            %i.icon-edit.icon-white
+            = t("admin.products.edit.edit_project")
+
       .row-fluid
         .project_attribute=sanitize t("admin.projects.show.description",title: @project.title )
-    
+      
       .row-fluid
         %span.project_description=sanitize(@project.description)   
     
+      
       .row-fluid
         .project_attribute=t("admin.projects.show.details",title:@project.title) 
     
