@@ -3,8 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'mixins';
+ 
+ .project_title{
+   font-size:300%;
+   font-weight:bold;   
+ }
 
-.new_project{
+ .project_control{
 	padding:1%;
 	text-decoration:none;
     

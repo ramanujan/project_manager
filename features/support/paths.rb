@@ -4,7 +4,7 @@ module NavigationHelpers
   
     case page_name
       when /home\s?page/ then '/'
-      when /store main page/ then '/store/'
+      when /store main page/ then '/store/' 
      end
   end
 

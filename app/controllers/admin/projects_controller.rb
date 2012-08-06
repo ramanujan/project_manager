@@ -29,6 +29,14 @@ class Admin::ProjectsController < ApplicationController
      
   end
 
+  def index 
+  
+    @projects = Project.all  
+    @title = t("admin.projects.index.available_projects") 
+    
+  end
+
+
   private
     
     def find_project

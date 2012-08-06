@@ -1,0 +1,11 @@
+.row-fluid
+  
+  .span4
+    .project_image
+      =image_tag "project.png"  
+  
+  .span8  
+    .project_title
+      =link_to (sanitize project.title), [:admin,project] 
+
+%hr.cool     

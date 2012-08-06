@@ -11,6 +11,7 @@
 
 class Project < ActiveRecord::Base
   attr_accessible :title, :description
-  validates :title, presence:true;
+  validates :title, presence:true, uniqueness:true
   validates :description, presence:true;
+
 end

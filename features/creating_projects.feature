@@ -25,4 +25,13 @@ Scenario: Creating a project without description
   And I fill in "Project title" with "TextMate 2"
   And I press "Create Project"
   Then I should see "Description can't be blank"
-  
+
+Scenario: Creating a project with an existent title 
+  And there is a project with title "TextMate 2"
+  And I fill in "Project title" with "TextMate 2"
+  And I fill in "Project description" with "Very nice!!"
+  When I press "Create Project"
+  Then I should not see "Project TextMate 2 was successfully created"
+  But I should see "Title has already been taken"
+
+
