@@ -9,7 +9,12 @@
         .span2
           =link_to [:edit,:admin,@project], class:"btn btn-primary" do
             %i.icon-edit.icon-white
-            = t("admin.products.edit.edit_project")
+            =t("admin.products.edit.edit_project")
+        .span2
+          =link_to [:admin,@project], method:"delete",
+            data:{confirm:t("admin.projects.delete.confirm",title:@project.title)}, class:"btn btn-danger" do
+            %i.icon-trash.icon-white
+            =t("admin.products.delete.delete_project")
 
       .row-fluid
         .project_attribute=sanitize t("admin.projects.show.description",title: @project.title )

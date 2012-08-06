@@ -1,6 +1,6 @@
 Feature: Viewing projects
   Come utente 
-  Voglio essere in grado di visualizzare una lista di progetti disponibili
+  Voglio essere in grado di visualizzare una lista di progetti a me disponibili
   In modo da poter assegnare dei ticket ad un progetto, cui sono stato autorizzato
 
 Background:

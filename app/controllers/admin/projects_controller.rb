@@ -66,6 +66,15 @@ class Admin::ProjectsController < ApplicationController
 
   end
 
+
+  def destroy
+  
+    @project = Project.destroy(params[:id])
+    flash[:block]=t("admin.projects.delete.success",title:@project.title)
+    redirect_to( admin_projects_path ) 
+  
+  end
+
   
 
   private

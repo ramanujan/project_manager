@@ -39,3 +39,7 @@ en:
         success:  "Project %{title} was successfully updated"
         error: "This error occurs during update: %{msg}"
         error_title: "Error updating %{title}"
+      delete:
+        delete_project: "Delete Project"
+        confirm: "Are you sure you want to delete '%{title}' ?"
+        success: "Project %{title} was successfully deleted"
