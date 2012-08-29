@@ -1,0 +1,18 @@
+-@tickets.each do |ticket|
+  .row-fluid
+    .span1
+      .ticket_image
+        =link_to [@project,ticket] do 
+          =image_tag("ticket_small.png") 
+    .span2
+      .ticket_title
+        =link_to [@project,ticket] do 
+          =ticket.title	  
+    .span6
+      .ticket_description_small
+        =link_to [@project,ticket] do 
+          =brief(simple_format( sanitize(ticket.description) ) )
+    
+    .span3 Comandi
+  
+  %hr.cool

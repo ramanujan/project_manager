@@ -1,0 +1,35 @@
+// Place all the styles related to the tickets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_ticket_button{
+	padding:8%;
+	font-size:200%;
+    width:100%;
+    margin-right: 20%;
+}
+
+.ticket_heading{
+  
+  font: italic normal 300% georgia, sans-serif;
+  letter-spacing: 1px;  
+  margin-top:2%;
+  //color: #7D775C;
+ }
+
+ .ticket_description{
+ 	font-size:150%;
+	font-weight:bold;
+	padding-left:1%;
+  font-family: "comic sans ms";
+  padding-left:3%;
+  line-height: 120%;
+ }
+
+.ticket_description_small{
+  font-size:110%;
+  font-weight:bold;
+}
+.ticket_image{
+  margin-left: 10%;
+}

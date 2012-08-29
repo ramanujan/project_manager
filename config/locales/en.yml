@@ -11,6 +11,7 @@ en:
   brand: "Powered By Domenico D'Egidio"
   header_title: "Bee Projects Manager"
   greetings: "Welcome To Bee Project Manager"
+  
   admin:
     projects:
       unavailable: "The project you are looking for could not be found"
@@ -24,10 +25,13 @@ en:
         success: "Project %{title} was successfully created"
         title_failure: "Error during creation of project %{title}"
       show:
-        description: "%{title} (description)"
-        details: "%{title} (details)" 
+        description: "Description"
+        details: "%{title}'s details" 
         created_at: "Created at : "
         updated_at: "Last update : "
+        heading: "Project : %{title}"
+        associated_tickets: "Associated tickets"
+        number_of_tickets: "This projects has %{number} tickets associated"
       edit:
         edit_project: "Edit Project"
         title: "Editing project %{title}"
@@ -43,3 +47,20 @@ en:
         delete_project: "Delete Project"
         confirm: "Are you sure you want to delete '%{title}' ?"
         success: "Project %{title} was successfully deleted"
+  
+  tickets:
+    new:
+      heading: "Insert tickets's details"
+      title: "New ticket"
+      label_title: "Ticket title"
+      description: "Ticket description"
+      submit: "Create Ticket"
+      unavailable: "The ticket you are looking for could not be found"
+    create:
+      success: "Ticket <%{title}> was successfully created"
+    show:
+      title: "Showing ticket %{title}" 
+      heading: "%{title} ( associted to %{project_title} )"
+      description: "Description"
+        
+

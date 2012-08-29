@@ -11,7 +11,9 @@
 
 class Project < ActiveRecord::Base
   attr_accessible :title, :description
+  has_many :tickets
   validates :title, presence:true, uniqueness:true
   validates :description, presence:true;
+
 
 end

@@ -1,11 +1,14 @@
-.bee-form
-  =form_for [:admin,@project] do |f| 
-    .bee-label=f.label :title, t("admin.projects.new.label_title")
-    .bee-input=f.text_field :title
+.row-fluid
+  .span12
+    .project_heading=t("admin.projects.new.heading")
+    .bee-form
+      =form_for [:admin,@project] do |f| 
+        .bee-label=f.label :title, t("admin.projects.new.label_title")
+        .bee-input=f.text_field :title
     
-    .bee-label=f.label :description, t("admin.projects.new.description")
-    .bee-input=f.text_area :description, rows:5
+        .bee-label=f.label :description, t("admin.projects.new.description")
+        .bee-input=f.text_area :description, rows:5
     
-    %div 
-      =@project.new_record? ? (f.submit t("admin.projects.new.submit"), class:"btn btn-large btn-primary") : (f.submit t("admin.projects.edit.submit"), class:"btn btn-large btn-primary")  
+        %div 
+          =@project.new_record? ? (f.submit t("admin.projects.new.submit"), class:"btn btn-large btn-primary") : (f.submit t("admin.projects.edit.submit"), class:"btn btn-large btn-primary")  
 

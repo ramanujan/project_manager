@@ -4,38 +4,42 @@
 
 @import 'mixins';
  
+ .project_heading{
+  
+  font: italic normal 300% georgia, sans-serif;
+  letter-spacing: 1px; 
+  margin-bottom: 0; 
+  margin-top:-5px;
+  //color: #7D775C;
+ }
+
  .project_title{
    font-size:300%;
    font-weight:bold;   
  }
 
  .project_control{
-	padding:1%;
+  padding: 1%;
 	text-decoration:none;
-    
+  
 }
 
-.project_heading, .project_attribute{
-  @include bee-background;
-  @include fancy-text;
-  margin-bottom:2%;
-  margin-top: 2%; 
-  padding:1%;
-}
+
 
 .project_description{
 	font-size:150%;
 	font-weight:bold;
-	padding-left:1%;
-	font-family: "comic sans ms"
+	margin-left:1%;
+  font-family: "comic sans ms";
+  line-height:120%; 
 }
 
-.project_detail{
+.project_attribute{
   font-size:150%;
   font-weight:bold;
   padding-left:4%;
 }
 
-.project_detail_value{
+.project_value{
   font-size:120%;
 }

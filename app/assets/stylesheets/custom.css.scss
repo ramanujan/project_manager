@@ -11,6 +11,22 @@ body{
   margin:0px;
   background:#f1f1ee; 
 }
+ 
+ .bordered{
+  
+   border:solid 1px #a1a1a1;  
+ 
+ }
+
+.bordered_left_right{
+  
+  border-left:solid 1px #a1a1a1;  
+  border-right:solid 1px #a1a1a1;  
+}
+
+.bordered_top{
+  border-top:solid 1px #a1a1a1;  
+}
 
 a:hover{
   text-decoration:none;
@@ -32,7 +48,7 @@ a:hover{
   font-weight:bold;
   padding-top:2.5%;
   padding-left:0;
-  //font-family: Georgia, serif;
+  font-family: "comic sans ms",Georgia, serif;
 }
 
 .cool{
@@ -50,6 +66,16 @@ p.greetings{
   margin-bottom:2%;
 }
 
+
+.heading{
+
+  @include bee-background;
+  @include fancy-text;
+  margin-bottom:2%;
+  margin-top: 2%; 
+  padding:1%;
+}
+
 .hero-bee{
   @include bee-background;
 }
@@ -65,7 +91,7 @@ p.greetings{
   line-height:110%;
   margin-top: 1.5%;
   font-size:150%;
-  width:100%;
+  width:99%;
   @include radius-7;
 
 }
@@ -80,5 +106,17 @@ p.greetings{
   font-weight:bold;
 }
 
+.right{
+  float:right;
+}
 
+.header_highlights,.header_highlights_top_margin{
+  @include bee-background;
+  @include fancy-text;
+  margin-bottom:2%;
+  padding:1%;
+}
 
+.header_highlights_top_margin{
+  margin-top:2%;
+}

@@ -1,0 +1,21 @@
+.row-fluid
+  
+  .span1 &nbsp;
+  
+  .span10
+    =render "shared/flash_messages"
+    %div{id:"main"}
+      .row-fluid
+        .span2
+          =image_tag("ticket_156.png")
+        .span10  
+          .ticket_heading
+            =t("tickets.show.heading",title:@ticket.title, project_title:@project.title)
+      %hr.cool
+      
+      .row.fluid
+        .span12
+          .ticket_description 
+            =simple_format( sanitize( @ticket.description ) ) 
+
+  .span1 &nbsp;        

@@ -4,11 +4,11 @@
   
   .span8
     %div{id:"main"}
-      - unless @project.errors.empty? 
+      - unless @ticket.errors.empty? 
         .row-fluid
           .span12
-            =render partial:'shared/errors', locals:{model:@project}
-             
+            =render partial:'shared/errors', locals:{model:@ticket}
+      
       =render "form" 
   
   .span2 &nbsp;

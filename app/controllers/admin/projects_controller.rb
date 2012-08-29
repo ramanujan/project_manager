@@ -28,7 +28,7 @@ class Admin::ProjectsController < ApplicationController
   def show
   
     @title=t("admin.projects.show.details",title:@project.title)
-     
+    @tickets = @project.tickets
   end
 
 
@@ -84,8 +84,8 @@ class Admin::ProjectsController < ApplicationController
       begin
         @project = Project.find( params[:id] )
       rescue
-        @title= t("projects.unavailable") 
-        flash['error'] = t("projects.unavailable")  
+        @title= t("admin.projects.unavailable") 
+        flash[:error] = t("admin.projects.unavailable")  
         redirect_to admin_projects_path
       end
     

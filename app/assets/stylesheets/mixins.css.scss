@@ -18,8 +18,11 @@
   background: -webkit-linear-gradient(top,$initialBeeYellow, $finalBeeYellow);
   background: -ms-linear-gradient(top, $initialBeeYellow, $finalBeeYellow);
   background: -o-linear-gradient(top, $initialBeeYellow, $finalBeeYellow); 
-  border:solid 1px #a1a1a1;  
-  @include radius-7;
+ // border-top:solid 1px #a1a1a1;  
+ // border-left:solid 1px #a1a1a1;  
+ // border-right:solid 1px #a1a1a1;  
+  border:solid 1px #a1a1a1;
+  //@include radius-7;
   
 }
 

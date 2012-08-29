@@ -1,43 +1,66 @@
-=render "shared/flash_messages"
 .row-fluid
   .span1 &nbsp;
   
   .span10
+    =render "shared/flash_messages"
     %div{id:"main"}
       
       .row-fluid
-        .span2
-          =link_to [:edit,:admin,@project], class:"btn btn-primary" do
-            %i.icon-edit.icon-white
-            =t("admin.products.edit.edit_project")
-        .span2
-          =link_to [:admin,@project], method:"delete",
-            data:{confirm:t("admin.projects.delete.confirm",title:@project.title)}, class:"btn btn-danger" do
-            %i.icon-trash.icon-white
-            =t("admin.products.delete.delete_project")
-
-      .row-fluid
-        .project_attribute=sanitize t("admin.projects.show.description",title: @project.title )
+        
+        .span12
+          .project_heading
+            =t("admin.projects.show.heading",title:@project.title)
       
-      .row-fluid
-        %span.project_description=sanitize(@project.description)   
-    
-      
-      .row-fluid
-        .project_attribute=t("admin.projects.show.details",title:@project.title) 
-    
-      .row-fluid
-        .span2 
-          .project_detail=t("admin.projects.show.created_at")   
-        .span10
-          .project_detail_value=l(@project.created_at,:format=>:long)
       %hr.cool
-
+      
       .row-fluid
-        .span2
-          .project_detail=t("admin.projects.show.updated_at")
-
-        .span10
-          .project_detail_value=l(@project.updated_at,:format=>:long)
-
+        .span12
+          .btn-toolbar
+            .btn-group
+              =link_to [:edit,:admin,@project], class:"btn btn-large" do
+                %i.icon-edit
+                =t("admin.projects.edit.edit_project")
+            
+            .btn-group
+              =link_to new_project_ticket_path(@project),class:"btn btn-large" do
+                %i.icon-tags
+                =t("admin.projects.show.new_ticket")
+            
+            .btn-group
+              =link_to [:admin,@project], method:"delete",data:{confirm:t("admin.projects.delete.confirm",title:@project.title)},class:"btn btn-large" do
+                %i.icon-trash
+                =t("admin.projects.delete.delete_project")
+        
+      %hr.cool
+      
+      .row-fluid.bordered
+        .row-fluid
+          .header_highlights=sanitize t("admin.projects.show.description")
+        
+        .row-fluid
+          .project_description=simple_format( sanitize( @project.description ) )   
+        
+        .row-fluid
+          .header_highlights_top_margin=t("admin.projects.show.details",title:@project.title)
+        
+        .row-fluid  
+          .span3 
+            .project_attribute=t("admin.projects.show.created_at")   
+          
+          .span9
+            .project_value=l(@project.created_at,:format=>:long)
+        
+        %hr.cool
+        
+        .row-fluid
+          .span3
+            .project_attribute=t("admin.projects.show.updated_at")
+          
+          .span9
+            .project_value=l(@project.updated_at,:format=>:long)
+      
+        .row-fluid
+          .header_highlights_top_margin=t("admin.projects.show.associated_tickets")
+        =render partial:"tickets"
+      %hr.cool 
   .span1 &nbsp; 

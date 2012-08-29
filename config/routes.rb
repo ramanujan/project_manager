@@ -1,4 +1,8 @@
 Ticketee::Application.routes.draw do
+  get "tickets/new"
+
+  get "tickets/create"
+
   get "base/index"
 
   get "/home", to:'static_pages#home'
@@ -8,6 +12,10 @@ Ticketee::Application.routes.draw do
     root to: 'base#index'
     resources :projects
   end
+  
+resources :projects do
+  resources :tickets
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
