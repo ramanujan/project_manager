@@ -79,3 +79,4 @@ en:
     delete:
       confirm: "Are you sure you want to delete '%{title}' ?"
       delete_ticket: "Delete Ticket"
+      success: "Ticket has been deleted"

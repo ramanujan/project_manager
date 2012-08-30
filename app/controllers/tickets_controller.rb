@@ -1,7 +1,7 @@
 class TicketsController < ApplicationController
   
   before_filter :find_project
-  before_filter :find_ticket, only:[:show,:edit,:update]
+  before_filter :find_ticket, only:[:show,:edit,:update,:destroy]
 
   def new
     @title = t("tickets.new.title")
@@ -52,7 +52,15 @@ class TicketsController < ApplicationController
     end 
 
   end
+  
 
+  def destroy
+
+    Ticket.delete(@ticket.id)
+    flash[:block] = t("tickets.delete.success")
+    redirect_to [:admin,@project]
+
+  end
 
   private 
     

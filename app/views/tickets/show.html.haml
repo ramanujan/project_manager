@@ -28,7 +28,7 @@
                 =t("tickets.edit.edit_ticket")
             
             .btn-group
-              =link_to [:edit,@project,@ticket], 
+              =link_to project_ticket_path(@project,@ticket), 
               method:"delete",
               data:{confirm:t("tickets.delete.confirm",title:@ticket.title)},
               class:"btn btn-large" do
