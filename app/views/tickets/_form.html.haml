@@ -1,6 +1,7 @@
 .row-fluid
   .span12
-    .heading=t("tickets.new.heading")
+    .heading
+      =@ticket.new_record? ? t("tickets.new.heading") : t("tickets.edit.heading")
     .bee-form
       =form_for [@project,@ticket] do |f| 
         .bee-label=f.label :title, t("tickets.new.label_title")

@@ -11,7 +11,7 @@
 
 class Project < ActiveRecord::Base
   attr_accessible :title, :description
-  has_many :tickets
+  has_many :tickets, :dependent=>:delete_all
   validates :title, presence:true, uniqueness:true
   validates :description, presence:true;
 

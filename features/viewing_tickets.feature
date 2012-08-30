@@ -13,7 +13,7 @@ Background:
     | title                | description             |
     | Standard compliance  | Isn't a joke!           |
   And I am on the homepage
-
+  
 Scenario: Viewing ticket for a given project
   When I follow "Listing all projects"
   And I follow "TextMate 2"

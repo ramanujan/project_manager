@@ -49,6 +49,7 @@ en:
         success: "Project %{title} was successfully deleted"
   
   tickets:
+    
     new:
       heading: "Insert tickets's details"
       title: "New ticket"
@@ -56,11 +57,25 @@ en:
       description: "Ticket description"
       submit: "Create Ticket"
       unavailable: "The ticket you are looking for could not be found"
+    
     create:
       success: "Ticket <%{title}> was successfully created"
+    
     show:
       title: "Showing ticket %{title}" 
-      heading: "%{title} ( associted to %{project_title} )"
+      heading: "%{title}"
+      associated_to: "( associated to "
+      project: "%{project_title} "
       description: "Description"
-        
-
+    
+    edit:
+      edit_ticket: "Edit Ticket"
+      heading: "Edit ticket attributes"
+      submit: "Update Ticket"
+    update:
+      success: "Ticket has been updated"
+      error_title: "The ticket could not be updated"
+      error: "This error occurs during update: %{msg}"
+    delete:
+      confirm: "Are you sure you want to delete '%{title}' ?"
+      delete_ticket: "Delete Ticket"

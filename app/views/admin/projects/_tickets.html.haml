@@ -8,7 +8,7 @@
       .ticket_title
         =link_to [@project,ticket] do 
           =ticket.title	  
-    .span6
+    .span6	
       .ticket_description_small
         =link_to [@project,ticket] do 
           =brief(simple_format( sanitize(ticket.description) ) )

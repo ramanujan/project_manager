@@ -1,12 +1,13 @@
 class TicketsController < ApplicationController
   
   before_filter :find_project
-  before_filter :find_ticket, only:[:show]
+  before_filter :find_ticket, only:[:show,:edit,:update]
 
   def new
     @title = t("tickets.new.title")
     @ticket = @project.tickets.build
   end
+
 
   def create
    
@@ -19,15 +20,38 @@ class TicketsController < ApplicationController
       @title = t("tickets.create.title_failure",title:@ticket.title)
       render :new  # Not use flash message. Error messages is self-explanatory
     end
-
-
   end
 
+  
   def show
     @title = t("tickets.show.title", title:@ticket.title)
   end
 
+  
+  def edit
+    @title = t("tickets.edit.title", title:@ticket.title)
+    render :new 
+  end
+  
+  
+  def update
+    begin
+      old_title = @ticket.title
+      if @ticket.update_attributes(params[:ticket])
+        flash[:block] = t("tickets.update.success",title:old_title)
+        redirect_to [@project,@ticket]
+      else
+        @title=t("tickets.update.error_title",title:old_title)
+        render :new
+      end  
+    
+    rescue => msg
+      @title=t("tickets.update.error_title",title:old_title)
+      flash[:error]=t("tickets.update.error",msg:msg)
+      redirect_to  [@project,@ticket]
+    end 
 
+  end
 
 
   private 

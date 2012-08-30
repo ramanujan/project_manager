@@ -5,17 +5,41 @@
   .span10
     =render "shared/flash_messages"
     %div{id:"main"}
+      
       .row-fluid
         .span2
           =image_tag("ticket_156.png")
         .span10  
           .ticket_heading
-            =t("tickets.show.heading",title:@ticket.title, project_title:@project.title)
+            =t("tickets.show.heading",title:@ticket.title)
+          %div
+            =t("tickets.show.associated_to")
+            =link_to( t("tickets.show.project",project_title:@project.title),[:admin,@project] )
+            )
+             
+      %hr.cool
+      
+      .row-fluid
+        .span12
+          .btn-toolbar
+            .btn-group
+              =link_to [:edit,@project,@ticket], class:"btn btn-large" do
+                %i.icon-edit
+                =t("tickets.edit.edit_ticket")
+            
+            .btn-group
+              =link_to [:edit,@project,@ticket], 
+              method:"delete",
+              data:{confirm:t("tickets.delete.confirm",title:@ticket.title)},
+              class:"btn btn-large" do
+                %i.icon-trash
+                =t("tickets.delete.delete_ticket")
       %hr.cool
       
       .row.fluid
         .span12
           .ticket_description 
             =simple_format( sanitize( @ticket.description ) ) 
+      %hr.cool      
 
   .span1 &nbsp;        
