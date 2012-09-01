@@ -1,4 +1,7 @@
 Ticketee::Application.routes.draw do
+ 
+  devise_for :users
+
   get "tickets/new"
 
   get "tickets/create"

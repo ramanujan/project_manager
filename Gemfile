@@ -11,10 +11,11 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-ui-themes'
-gem "paperclip", "2.7.0" # :git => "git://github.com/thoughtbot/paperclip.git"
-gem 'bcrypt-ruby', '3.0.1'
+gem 'devise'
+# gem "paperclip", "2.7.0" # :git => "git://github.com/thoughtbot/paperclip.git"
+# gem 'bcrypt-ruby', '3.0.1'
 gem 'nokogiri'
-gem 'premailer-rails3', '1.1.0'   # Questa gem sposta lo styling dal tag <style> e lo rende inline 
+#gem 'premailer-rails3', '1.1.0'   # Questa gem sposta lo styling dal tag <style> e lo rende inline 
                                   # This version doesn' couse problem with heroku!
                                   
 # Gems used only for assets and not required
